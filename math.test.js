@@ -33,12 +33,42 @@ const d = 'd';
 test('to be defined', () => {
   expect(d).toBeDefined();
 });
-test('to be a string', () => {
-  expect(d).toBeString();
-});
 test('to be falsy', () => {
   expect(c).toBeFalsy();
 });
 test('to be truthy', () => {
   expect(d).toBeTruthy();
+});
+
+// Number related
+// toBeGreaterThan, toBeLessThan, toBeGreaterThanOrEqual, toBeLessThanOrEqual
+test('to be greater than', () => {
+  expect(10).toBeGreaterThan(2);
+});
+// toBeCloseTo
+
+test('to be close to', () => {
+  const first = 0.1;
+  const second = 0.2;
+  // expect(first + second).toEqual(0.3);
+  // won't pass because javascript sucks
+  expect(first + second).toBeCloseTo(0.3);
+});
+
+// STRING
+
+test('toMatch', () => {
+  const url = 'http://www.example.com';
+  expect(url).toMatch(/www/);
+});
+
+// ARRAY, SET
+// ** contain is frequently used
+test('toContain', () => {
+  const arr = ['a', 'b', 'c', 'd'];
+  expect(arr).toContain('d');
+});
+test('toNotContain', () => {
+  const arr = ['a', 'b', 'c', 'd'];
+  expect(arr).not.toContain('f');
 });
