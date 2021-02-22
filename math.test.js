@@ -72,3 +72,10 @@ test('toNotContain', () => {
   const arr = ['a', 'b', 'c', 'd'];
   expect(arr).not.toContain('f');
 });
+
+test('toThrow', () => {
+  const errFunc = () => {
+    throw new Error('something wrong');
+  };
+  expect(errFunc).toThrow();
+});
