@@ -28,3 +28,17 @@ const c = undefined;
 test('to be undefined', () => {
   expect(c).toBeUndefined();
 });
+
+const d = 'd';
+test('to be defined', () => {
+  expect(d).toBeDefined();
+});
+test('to be a string', () => {
+  expect(d).toBeString();
+});
+test('to be falsy', () => {
+  expect(c).toBeFalsy();
+});
+test('to be truthy', () => {
+  expect(d).toBeTruthy();
+});
