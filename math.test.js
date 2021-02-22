@@ -77,5 +77,6 @@ test('toThrow', () => {
   const errFunc = () => {
     throw new Error('something wrong');
   };
-  expect(errFunc).toThrow();
+  expect(errFunc).toThrow('something wrong');
+  // expect(errFunc).toThrow(); would also work
 });
